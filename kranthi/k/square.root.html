@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Square Root Calculator</title>
+</head>
+<body>
+	<label for="number">Enter a number:</label>
+	<input type="text" id="number">
+	
+	<button onclick="calculate()">Calculate Square Root</button>
+
+	<p id="result"></p>
+
+	<script>
+		function calculate() {
+			var number = parseInt(document.getElementById("number").value);
+			var squareRoot = Math.sqrt(number);
+
+			document.getElementById("result").innerHTML = "The square root of " + number + " is: " + squareRoot;
+		}
+	</script>
+</body>
+</html>

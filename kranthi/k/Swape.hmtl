@@ -1,0 +1,30 @@
+JavaScript Program to Swap Two Variables 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Variable Swapper</title>
+</head>
+<body>
+	<label for="var1">Enter the first variable:</label>
+	<input type="text" id="var1">
+	
+	<label for="var2">Enter the second variable:</label>
+	<input type="text" id="var2">
+
+	<button onclick="swap()">Swap Variables</button>
+
+	<p id="result"></p>
+
+	<script>
+		function swap() {
+			var var1 = document.getElementById("var1").value;
+			var var2 = document.getElementById("var2").value;
+
+			// Use destructuring assignment to swap the values
+			[var1, var2] = [var2, var1];
+
+			document.getElementById("result").innerHTML = "After swapping, the first variable is: " + var1 + " and the second variable is: " + var2;
+		}
+	</script>
+</body>
+</html>

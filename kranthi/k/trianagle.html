@@ -1,0 +1,28 @@
+JavaScript Program to Calculate the Area of a Triangle 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Triangle Area Calculator</title>
+</head>
+<body>
+	<label for="base">Enter the base of the triangle:</label>
+	<input type="text" id="base">
+	
+	<label for="height">Enter the height of the triangle:</label>
+	<input type="text" id="height">
+
+	<button onclick="calculate()">Calculate Area</button>
+
+	<p id="result"></p>
+
+	<script>
+		function calculate() {
+			var base = parseFloat(document.getElementById("base").value);
+			var height = parseFloat(document.getElementById("height").value);
+			var area = 0.5 * base * height;
+
+			document.getElementById("result").innerHTML = "The area of the triangle is: " + area;
+		}
+	</script>
+</body>
+</html>

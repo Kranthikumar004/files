@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<script>
+	function validateForm() {
+		var firstName = document.forms["registration"]["firstName"].value;><br><br>
+
+		var lastName = document.forms["registration"]["lastName"].value;><br><br>
+
+		var userName = document.forms["registration"]["userName"].value;><br><br>
+
+		var password = document.forms["registration"]["password"].value;><br><br>
+
+		var confirmPassword = document.forms["registration"]["confirmPassword"].value;><br><br>
+
+		var dob = document.forms["registration"]["dob"].value;><br><br>
+
+		var email = document.forms["registration"]["email"].value;><br><br>
+
+		var phoneNumber = document.forms["registration"]["phoneNumber"].value;><br><br>
+
+		var gender = document.forms["registration"]["gender"].value;><br><br>
+
+		var languageKnown = document.forms["registration"]["languageKnown"].value;><br><br>
+
+		var state = document.forms["registration"]["state"].value;><br><br>
+
+		var address = document.forms["registration"]["address"].value;><br><br>
+;
+		var pincode = document.forms["registration"]["pincode"].value;><br><br>
+
+
+		if (firstName == "" || lastName == "" || userName == "" || password == "" || confirmPassword == "" || dob == "" || email == "" || phoneNumber == "" || gender == "" || languageKnown == "" || state == "" || address == "" || pincode == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+
+		if (password != confirmPassword) {
+			alert("Passwords do not match");
+			return false;
+		}
+
+		if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
+			alert("Invalid email address");
+			return false;
+		}
+
+		if (!/^[0-9]{10}$/.test(phoneNumber)) {
+			alert("Invalid phone number");
+			return false;
+		}
+
+		if (!/^[0-9]{6}$/.test(pincode)) {
+			alert("Invalid pincode");
+			return false;
+		}
+
+		return true;
+	}
+	</script>
+</head>
+<body>
+	<form name="registration" onsubmit="return validateForm()">
+		<fieldset>
+			<br>
+		<label>First Name:</label>
+		<input type="text" name="firstName">&nbsp
+		<label>Last Name:</label>
+		<input type="text" name="lastName"><br>
+		<br>
+		<label>User Name:</label>
+		<input type="text" name="userName"><br><br>
+
+		<label>Password:</label>
+		<input type="password" name="password">&nbsp
+
+		<label>Confirm Password:</label>
+		<input type="password" name="confirmPassword"><br><br>
+
+		<label>Date of Birth:</label>
+		<input type="date" name="dob"><br><br>
+
+		<label>Email:</label>
+		<input type="email" name="email"><br><br>
+
+		<label>Phone Number:</label>
+		<input type="tel" name="phoneNumber"><br><br>
+
+		<label>Gender:</label>
+		<input type="radio" name="gender" value="male">Male
+		<input type="radio" name="gender" value="female">Female<br><br>
+
+		<label>Language Known:</label>
+		<input type="checkbox" name="languageKnown" value="english">English
+		<input type="checkbox" name="languageKnown" value="spanish">Telugu
+		<input type="checkbox" name="languageKnown" value="french">Hindi<br><br>
+
+		<label>State:</label>
+		<select name="state">
+			<option value="">Select a state</option>
+			<option value="Ap">AndhraPradesh</option>
+			<option value="Tn">TamilNaidu</option>
+			<option value="Tl">Telegana</option>
+			<option value="Kr">Karatanaka</option>
+			<option value="M">Maharastra</option>
+			<!-- add more options here -->
+		</select><br><br>
+
+		<label>Address:</label>
+		<textarea name="address"></textarea><br><br>
+
+		<label>Pincode:</label>
+		<input type="text" name="pincode"><br><br>
+
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset"><br>
+		</fieldset>
+	</form>
+</body>
+</html>

@@ -1,0 +1,176 @@
+1. JavaScript Program To Print Hello World 
+console.log("Hello World");
+or 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello, World!</title>
+</head>
+<body>
+	<h1 id="greeting"></h1>
+
+	<script>
+		document.getElementById("greeting").innerHTML = "Hello, World!";
+	</script>
+</body>
+</html>
+
+
+2. JavaScript Program to Add Two Numbers 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Addition Program</title>
+</head>
+<body>
+	<label for="num1">Enter first number:</label>
+	<input type="text" id="num1">
+	<br>
+	<label for="num2">Enter second number:</label>
+	<input type="text" id="num2">
+
+	<button onclick="addNumbers()">Add</button>
+
+	<p id="result"></p>
+
+	<script>
+		function addNumbers() {
+			var num1 = parseInt(document.getElementById("num1").value);
+			var num2 = parseInt(document.getElementById("num2").value);
+			var sum = num1 + num2;
+
+			document.getElementById("result").innerHTML = "The sum of " + num1 + " and " + num2 + " is: " + sum;
+		}
+	</script>
+</body>
+</html>
+
+
+3. JavaScript Program to Find the Square Root 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Square Root Calculator</title>
+</head>
+<body>
+	<label for="number">Enter a number:</label>
+	<input type="text" id="number">
+	
+	<button onclick="calculate()">Calculate Square Root</button>
+
+	<p id="result"></p>
+
+	<script>
+		function calculate() {
+			var number = parseInt(document.getElementById("number").value);
+			var squareRoot = Math.sqrt(number);
+
+			document.getElementById("result").innerHTML = "The square root of " + number + " is: " + squareRoot;
+		}
+	</script>
+</body>
+</html>
+
+
+4. JavaScript Program to Calculate the Area of a Triangle 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Triangle Area Calculator</title>
+</head>
+<body>
+	<label for="base">Enter the base of the triangle:</label>
+	<input type="text" id="base">
+	
+	<label for="height">Enter the height of the triangle:</label>
+	<input type="text" id="height">
+
+	<button onclick="calculate()">Calculate Area</button>
+
+	<p id="result"></p>
+
+	<script>
+		function calculate() {
+			var base = parseFloat(document.getElementById("base").value);
+			var height = parseFloat(document.getElementById("height").value);
+			var area = 0.5 * base * height;
+
+			document.getElementById("result").innerHTML = "The area of the triangle is: " + area;
+		}
+	</script>
+</body>
+</html>
+
+
+5. JavaScript Program to Swap Two Variables 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Variable Swapper</title>
+</head>
+<body>
+	<label for="var1">Enter the first variable:</label>
+	<input type="text" id="var1">
+	
+	<label for="var2">Enter the second variable:</label>
+	<input type="text" id="var2">
+
+	<button onclick="swap()">Swap Variables</button>
+
+	<p id="result"></p>
+
+	<script>
+		function swap() {
+			var var1 = document.getElementById("var1").value;
+			var var2 = document.getElementById("var2").value;
+
+			// Use destructuring assignment to swap the values
+			[var1, var2] = [var2, var1];
+
+			document.getElementById("result").innerHTML = "After swapping, the first variable is: " + var1 + " and the second variable is: " + var2;
+		}
+	</script>
+</body>
+</html>
+
+6. JavaScript Program to Convert Kilometers to Miles 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kilometer to Mile Converter</title>
+</head>
+<body>
+	<label for="km">Enter the distance in kilometers:</label>
+	<input type="text" id="km">
+	
+	<button onclick="convert()">Convert to Miles</button>
+
+	<p id="result"></p>
+
+	<script>
+		function convert() {
+			var km = parseFloat(document.getElementById("km").value);
+			var miles = km * 0.621371;
+
+			document.getElementById("result").innerHTML = km + " kilometers is equal to " + miles + " miles.";
+		}
+	</script>
+</body>
+</html>
+
+7. Javascript Program to Convert Celsius to Fahrenheit 
+8. Javascript Program to Generate a Random Number 
+9. Javascript Program to Check if a number is Positive, Negative, or Zero 
+10. Javascript Program to Check if a Number is Odd or Even 
+11. JavaScript Program to Find the Largest Among Three Numbers 
+12. JavaScript Program to Check Prime Number 
+13. JavaScript Program to Print All Prime Numbers in an Interval 
+14. JavaScript Program to Find the Factorial of a Number 
+15. JavaScript Program to Display the Multiplication Table 
+16. JavaScript Program to Print the Fibonacci Sequence 
+17. JavaScript Program to Check Armstrong Number 
+18. JavaScript Program to Find Armstrong Number in an Interval 
+19. JavaScript Program to Make a Simple Calculator 
+20. JavaScript Program to Find the Sum of Natural Numbers 
+21. JavaScript Program to Find ASCII Value of Character 
+22. JavaScript Program to Check Whether a String is Palindrome or Not   

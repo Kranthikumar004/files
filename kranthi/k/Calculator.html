@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	<h1>Calculator</h1>
+	<style>
+		h1 {
+  font-family: Arial, sans-serif;
+  color: #FFA600;
+}
+	.calculator {
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: inline-block;
+}
+
+.calculator #result {
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 24px;
+  text-align: right;
+}
+
+.calculator .keys {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calculator .keys button {
+  width: 25%;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.calculator .keys button:nth-child(4),
+.calculator .keys button:nth-child(8),
+.calculator .keys button:nth-child(12),
+.calculator .keys button:nth-child(16) {
+  background-color: #ddd;
+}
+
+</style>
+</head>
+
+
+<body align="center">
+<div class="calculator">
+  <input type="text" id="result" readonly>
+  <div class="keys">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>+</button>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button>-</button>
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button>*</button>
+    <button>0</button>
+    <button>/</button>
+    <button>AC</button>
+    <button>=</button><br>
+  </div>
+</div>
+
+<script>
+	var keys = document.querySelectorAll('.keys button');
+var result = document.getElementById('result');
+for (var i = 0; i < keys.length; i++) {
+  keys[i].addEventListener('click', function() {
+    var key = this.innerHTML;
+    
+    if (key == 'AC') {
+      result.value = '';
+    }
+    else if (key == '=') {
+      result.value = eval(result.value);
+    }
+    else {
+      result.value += key;
+    }
+  });
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+8. Javascript Program to Generate a Random Number 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Number Generator</title>
+</head>
+<body>
+
+	<h1>Random Number Generator</h1>
+
+	<label for="min">Enter minimum value:</label>
+	<input type="number" id="min" name="min">
+
+	<label for="max">Enter maximum value:</label>
+	<input type="number" id="max" name="max">
+
+	<button onclick="generateNumber()">Generate</button>
+
+	<p id="result"></p>
+
+	<script>
+		function generateNumber() {
+			var min = parseInt(document.getElementById("min").value);
+			var max = parseInt(document.getElementById("max").value);
+			var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+			document.getElementById("result").innerHTML = "Random number: " + randomNumber;
+		}
+	</script>
+
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+Javascript Program to Check if a number is Positive, Negative, or Zero 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number Checker</title>
+</head>
+<body>
+
+	<h1>Number Checker</h1>
+
+	<label for="number">Enter a number:</label>
+	<input type="number" id="number" name="number">
+
+	<button onclick="checkNumber()">Check</button>
+
+	<p id="result"></p>
+
+	<script>
+		function checkNumber() {
+			var number = parseInt(document.getElementById("number").value);
+			if (number > 0) {
+				document.getElementById("result").innerHTML = "The number is positive";
+			} else if (number < 0) {
+				document.getElementById("result").innerHTML = "The number is negative";
+			} else {
+				document.getElementById("result").innerHTML = "The number is zero";
+			}
+		}
+	</script>
+
+</body>
+</html>
